@@ -1,13 +1,15 @@
 body{
     background-color: #65CCB8;
     font-family:monospace;
+    display: flex;
+    justify-content: center;
 }
 *{
     margin: 0;
     padding: 0;
 }
 .container{
-    width:100%;
+    width:20%;
     height: 100vh;
 }
 .navbar{
@@ -71,4 +73,17 @@ body{
 }
 .change .line-3{
     transform:rotateZ(405deg) translate(-8px,-6px);
+}
+.body-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    padding-top: 250px;
+    font-family: 'DM Sans', sans-serif;
+    color: #f2f2f2;
+}
+.title-text{
+    font-size: 80px;
+    font-weight: 800;
 }
