@@ -64,11 +64,11 @@ body{
 }
 
 .change .line-1{
-    transform:rotateZ(-45deg) translate(-8px,6px);
+    transform:rotateZ(-405deg) translate(-8px,6px);
 }
 .change .line-2{
     opacity: 0;
 }
 .change .line-3{
-    transform:rotateZ(45deg) translate(-8px,-6px);
+    transform:rotateZ(405deg) translate(-8px,-6px);
 }
