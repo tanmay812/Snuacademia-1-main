@@ -87,3 +87,17 @@ body{
     font-size: 80px;
     font-weight: 800;
 }
+
+.footer{
+    background-color: #182628;
+    height: 40px;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    height: 20px;
+    padding:10px;
+    font-weight: 1000;
+}
