@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: rgba(15,16,18,255);
     color: white;
     font-family: 'DM Sans', sans-serif;
 }
@@ -10,7 +10,9 @@ body{
     margin-top: 20px;
 }
 .logo{
-    width: 25%;
+    display: flex;
+    justify-content: center;
+    width: 15%;
 }
 .options{
     display: flex;
@@ -21,4 +23,20 @@ body{
 .options>div:hover{
     border-bottom: 2px solid white;
     border-radius: 2px;
+}
+.home{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+}
+.slogan{
+    font-size: 70px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.slogan-para{
+    font-size:20px;
+    width:max(60%,300px);
 }
