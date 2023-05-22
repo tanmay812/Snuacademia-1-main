@@ -7,7 +7,7 @@ toggle.addEventListener('click', function(){
         body.style.background = 'white';
         body.style.color = 'black';
         //body.style.transition = '2s';
-        img.src = "reasources/light-mac.jpeg"
+        //img.src = "reasources/light-mac.jpeg"
         img.style.width = "50%"
     }else{
         body.style.background = 'rgba(15,16,18,255)';
