@@ -1,14 +1,17 @@
 
 body{
     background-color: rgba(15,16,18,255);
+    background-color: black;
     color: white;
     font-family: 'DM Sans', sans-serif;
 }
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 50px;
-    margin-top: 20px;
+    align-items: center;
+    margin-right: 9%;
+    margin-left: 8%;
 }
 .logo{
     display: flex;
@@ -39,12 +42,15 @@ body{
 }
 .slogan-para{
     font-size:20px;
-    
     width:max(60%,300px);
 }
 i{
-    
+    height: 30px;
     cursor:pointer;
     transform: translate(-50%,-50%);
+}
+.logo{
+    display: flex;
+    align-items: center;
 }
 
