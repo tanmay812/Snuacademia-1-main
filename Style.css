@@ -33,6 +33,10 @@ body {
 
 }
 
+.options>div:hover {
+    text-decoration: black solid underline;
+    text-decoration-thickness: 2px;
+}
 
 .home {
     margin-top: 50px;
