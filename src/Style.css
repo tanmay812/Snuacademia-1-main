@@ -1,7 +1,17 @@
+/*Using Css variable*/
+:root{
+    --bg-color: white;
+    --font-color: black;
+}
+.dark{
+    --bg-color: black;
+    --font-color: white;
+}
+
 body {
     background-color: rgba(15, 16, 18, 255);
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--font-color);
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -28,14 +38,9 @@ body {
 }
 
 .options>div:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--font-color);
     border-radius: 2px;
 
-}
-
-.options>div:hover {
-    text-decoration: black solid underline;
-    text-decoration-thickness: 2px;
 }
 
 .home {
@@ -58,7 +63,8 @@ body {
 }
 
 i {
-    height: 30px;
+    font-size: 25px;
+    width: auto;
     cursor: pointer;
     transform: translate(-50%, -50%);
 }
@@ -66,4 +72,84 @@ i {
 .logo {
     display: flex;
     align-items: center;
+}
+/* study-material page */
+.study{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.tagline{
+    margin-top: 5vh;
+    font-size: max(50px,4vw);
+    font-weight: 950;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-bar{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid var(--font-color);
+    width: 40vw;
+    padding: 8px;
+    padding-left: 15px;
+    gap: 10px;
+    border-radius: 5px;
+}
+#course-select{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    border: none;
+    outline: none;
+    color: (--font-color) ;
+    font-size: 25px;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+    font-weight: 100;
+    width: 80%;
+}
+
+.courses{
+    width: 90%;
+    height: 20px;
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.courseBox{
+    height: 200px;
+    width: 300px;
+    border: 2px solid var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color);
+}
+
+.glink{
+    display: none;
+}
+a{
+    color: var(--font-color);
+}
+a:visited{
+    text-decoration: none;
+    color: var(--font-color);
+}
+a:hover{
+    text-decoration: none;
+    color: var(--font-color);
+}
+a:active{
+    text-decoration: none;
+    color: var(--font-color);
 }
