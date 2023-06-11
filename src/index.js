@@ -46,11 +46,26 @@ let homegen = ()=>{
     <img id="image" src="../src/reasources/light-bat.jpg" style="width:50%;margin-right: 10%;">
 </div>`
 }
+
 //default is Home
-//homegen();
+homegen();
 document.getElementById('home').addEventListener('click', homegen)
 
-//Generate
+let studyGen = ()=>{
+    generate.innerHTML = `<div class="study">
+    <div class="tagline">
+        <span>Where Textbooks</span>
+        <span>And Dreams Collide</span>
+        <span style="font-size: max(20px,1.5vw); font-weight: 200; margin-top: 2vh;">Explore, Discover, and Shape Your Academic Journey with Limitless Possibilities</span>
+    </div>
+    <div class="search-bar">
+        <span><i class="bi bi-search" style="font-size: max(20px,1.5vw);" ></i></span>
+        <input type="text" id="course-select" placeholder="Search..." data-search>
+    </div>
+    <div class="courses">
+        
+    </div>
+</div>`
 const generateCourses = (array, linkArray) => {
     let courses = document.querySelector('.courses');
     let searchBar = document.getElementById('course-select');
@@ -91,3 +106,8 @@ const generateCourses = (array, linkArray) => {
 let courseArr = ['DES101','FAC202','MEC104','MKT202','OHM401','STM204']
 let linkArr = ['https://drive.google.com/drive/folders/1pfWH0J2ek7yxTMbmoCv-4YQPB5XKOLHr?usp=sharing','https://drive.google.com/drive/folders/1q7UsKWFg5odT6rX57T4LArhSY5eLa2RJ?usp=sharing','https://drive.google.com/drive/folders/1NlrHKCP52b53OQiYcdBgO7NvL9eQ81zv?usp=sharing','https://drive.google.com/drive/folders/1tzIs2ux6lR1u8eT9fTAD-5JXBkhAGqrb?usp=drive_link','https://drive.google.com/drive/folders/1_-mkdQHCqpPceiQeZw7j91r0hVcUhmhJ?usp=sharing','https://drive.google.com/drive/folders/1Z9BqJC1vCnMxFSRT8YMafB1sdlLAv8mu?usp=sharing'];
 generateCourses(courseArr,linkArr);
+
+}
+document.getElementById('study').addEventListener('click',studyGen)
+//Generate
+
