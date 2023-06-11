@@ -1,3 +1,8 @@
+import './Style.css';
+
+console.log('hiya');
+
+
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
 const img =document.getElementById('image')
@@ -8,15 +13,13 @@ toggle.addEventListener('click', function(){
     if(this.classList.toggle('bi-brightness-high-fill')){
         body.style.background = 'white';
         body.style.color = 'black';
-        //body.style.transition = '2s';
-        img.src = "reasources/light-bat.jpg"
+        img.src = "../src/reasources/light-bat.jpg"
         img.style.width = "50%"
-        logo.src='reasources/6.png'
+        logo.src='../src/reasources/6.png'
     }else{
         body.style.background = 'black';
         body.style.color = 'white';
-        //body.style.transition = '2s';
-        img.src = "reasources/dark.jpg"
-        logo.src='reasources/5.png'
+        img.src = "../src/reasources/dark.jpg"
+        logo.src='../src/reasources/5.png'
     }
 });
