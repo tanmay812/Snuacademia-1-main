@@ -166,6 +166,11 @@ a:active{
     justify-content: space-around;
     gap: 10px;
 }
+.erpManagement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .linkSection>div{
     display: flex;
     
@@ -185,4 +190,23 @@ a:active{
     color: var(--bg-color);
     background-color: var(--font-color);
     transition: 100ms;
+}
+.faqs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7vh;
+    width: 80%;
+    gap:20px;
+}
+.faqs>div{
+    width: 100%;
+    border: 1px solid var(--font-color);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 2px;
+}
+.sol{
+    display: none;
 }
