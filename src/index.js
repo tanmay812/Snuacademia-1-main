@@ -3,9 +3,7 @@ import './Style.css';
 //DarkMode LightMode Toggle
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
-
-
-const options = document.getElementById('options')
+const options = document.getElementById('options');
 
 //Generate homePage dynamically
 
@@ -14,16 +12,21 @@ toggle.addEventListener('click', function(){
     document.body.classList.toggle('dark');
     const logo = document.getElementById('logo')
     const img =document.getElementById('image')
+    
     //see which mode it is
     const isDarkMode = body.classList.contains('dark');
 
     if(isDarkMode){
         logo.src = "../src/reasources/dark-logo.jpeg";
-        img.src = "../src/reasources/dark.jpg";
+        if(img){
+          img.src = "../src/reasources/dark.jpg";
+        }
     }
     else{
         logo.src = "../src/reasources/light-logo.jpeg";
-        img.src = "../src/reasources/light-bat.jpg";
+        if(img){
+          img.src = "../src/reasources/light-bat.jpg";
+        }
     }
 });
 
@@ -48,9 +51,10 @@ let homegen = ()=>{
 }
 
 //default is Home
-homegen();
+//homegen();
 document.getElementById('home').addEventListener('click', homegen)
 
+//generate Study Material Tab
 let studyGen = ()=>{
     generate.innerHTML = `<div class="study">
     <div class="tagline">
@@ -66,6 +70,7 @@ let studyGen = ()=>{
         
     </div>
 </div>`
+
 const generateCourses = (array, linkArray) => {
     let courses = document.querySelector('.courses');
     let searchBar = document.getElementById('course-select');
@@ -109,5 +114,17 @@ generateCourses(courseArr,linkArr);
 
 }
 document.getElementById('study').addEventListener('click',studyGen)
-//Generate
 
+//Generate Roadmap
+const roadGen = ()=>{
+  generate.innerHTML = ``;
+}
+
+document.getElementById('road').addEventListener('click',roadGen);
+
+//Generate Erp Management Tab
+const erpGen = ()=>{
+  generate.innerHTML = ``;
+}
+
+document.getElementById('erp').addEventListener('click',erpGen);
