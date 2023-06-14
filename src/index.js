@@ -14,7 +14,7 @@ toggle.addEventListener('click', function(){
     const img =document.getElementById('image')
     
     //see which mode it is
-    const isDarkMode = body.classList.contains('dark');
+    let isDarkMode = body.classList.contains('dark');
 
     if(isDarkMode){
         logo.src = "../src/reasources/dark-logo.jpeg";
@@ -33,6 +33,8 @@ toggle.addEventListener('click', function(){
 let generate = document.querySelector('.generate');
 
 let homegen = ()=>{
+  const isDarkMode = body.classList.contains('dark');
+
     generate.innerHTML = 
     `<div class="home">
     <div class="content">
@@ -48,6 +50,17 @@ let homegen = ()=>{
     </div>
     <img id="image" src="../src/reasources/light-bat.jpg" style="width:50%;margin-right: 10%;">
 </div>`
+const img = document.getElementById('image')
+if(isDarkMode){
+  if(img){
+    img.src = "../src/reasources/dark.jpg";
+  }
+}
+else{
+  if(img){
+    img.src = "../src/reasources/light-bat.jpg";
+  }
+}
 }
 
 //default is Home
@@ -107,17 +120,73 @@ const generateCourses = (array, linkArray) => {
     //To generate courses when you load up page
     searchBar.dispatchEvent(new Event('input'));
   };
+
 //example arrays
 let courseArr = ['DES101','FAC202','MEC104','MKT202','OHM401','STM204']
 let linkArr = ['https://drive.google.com/drive/folders/1pfWH0J2ek7yxTMbmoCv-4YQPB5XKOLHr?usp=sharing','https://drive.google.com/drive/folders/1q7UsKWFg5odT6rX57T4LArhSY5eLa2RJ?usp=sharing','https://drive.google.com/drive/folders/1NlrHKCP52b53OQiYcdBgO7NvL9eQ81zv?usp=sharing','https://drive.google.com/drive/folders/1tzIs2ux6lR1u8eT9fTAD-5JXBkhAGqrb?usp=drive_link','https://drive.google.com/drive/folders/1_-mkdQHCqpPceiQeZw7j91r0hVcUhmhJ?usp=sharing','https://drive.google.com/drive/folders/1Z9BqJC1vCnMxFSRT8YMafB1sdlLAv8mu?usp=sharing'];
 generateCourses(courseArr,linkArr);
-
 }
 document.getElementById('study').addEventListener('click',studyGen)
 
 //Generate Roadmap
 const roadGen = ()=>{
-  generate.innerHTML = ``;
+  generate.innerHTML = `<div class="roadMaps">
+  <div class="tagline">
+      <span>Choose</span>
+      <span>Your Academic Trail</span>
+      <span style="font-size: max(20px,1.5vw); font-weight: 200; margin-top: 2vh;">Chart Your Academic Journey: Explore Major and Minor Paths</span>
+  </div>
+  <div class="search-bar">
+      <span><i class="bi bi-search" style="font-size: max(20px,1.5vw);" ></i></span>
+      <input type="text" id="course-select" placeholder="Search..." data-search>
+  </div>
+  <div class="roads">
+      
+  </div>`;
+  let roadArr = ['CSC','ECE','EEE','MECH','BMS','ECO']
+  generateRoad(roadArr);
+}
+
+const generateRoad = (array) => {
+  let roads = document.querySelector('.roads');
+  let searchBar = document.getElementById('course-select');
+  
+    searchBar.addEventListener('input', () => {
+      //input being typed inside the search bar
+      const searchText = searchBar.value.toLowerCase();
+  
+      // Clear existing courses
+      roads.innerHTML = '';
+  
+      for (let index = 0; index < array.length; index++) {
+        const branchName = array[index].toLowerCase();
+        //const link = linkArray[index];
+        if (branchName.includes(searchText)) {
+          let mapDiv = document.createElement('div');
+          mapDiv.classList.add('roadBox');
+          roads.appendChild(mapDiv);
+          mapDiv.innerHTML = `<span id="course-${index}">${array[index]}</span>
+          <div style="display:flex; justify-content: space-around; width:80%" >
+          <span class="glink-r"  id="majorLink-${index}"><a class='ar' href="https://www.google.com/" target="_blank">Major</a></span>
+          <span class="glink-r" id="minorLink-${index}"><a class='ar'href="https://www.google.com/" target="_blank">Minor</a></span>
+          </div>`;
+  
+          mapDiv.addEventListener('mouseover', () => {
+            document.getElementById(`course-${index}`).style.display = 'none';
+            document.getElementById(`majorLink-${index}`).style.display = 'flex';
+            document.getElementById(`minorLink-${index}`).style.display = 'flex';
+
+          });
+          mapDiv.addEventListener('mouseout', () => {
+            document.getElementById(`course-${index}`).style.display = 'flex';
+            document.getElementById(`majorLink-${index}`).style.display = 'none';
+            document.getElementById(`minorLink-${index}`).style.display = 'none';
+          });
+        }
+      }
+    });
+    //To generate courses when you load up page
+    searchBar.dispatchEvent(new Event('input'));
 }
 
 document.getElementById('road').addEventListener('click',roadGen);
