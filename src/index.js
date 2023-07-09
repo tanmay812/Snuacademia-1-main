@@ -1,6 +1,10 @@
 import "./Style.css";
 import logo1 from "../src/reasources/10.png";
 import logo2 from "../src/reasources/9.png";
+
+//Intial logo generation
+document.getElementById("logo").src = logo1;
+
 //DarkMode LightMode Toggle
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
