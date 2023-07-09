@@ -11,8 +11,6 @@ const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
 const options = document.getElementById("options");
 
-//Generate homePage dynamically
-
 toggle.addEventListener("click", function () {
   this.classList.toggle("bi-moon");
   document.body.classList.toggle("dark");
@@ -40,6 +38,8 @@ const hoe = document.getElementById("home");
 const stud = document.getElementById("study");
 const road = document.getElementById("road");
 const erp = document.getElementById("erp");
+
+//Generate homePage dynamically
 let homegen = () => {
   const isDarkMode = body.classList.contains("dark");
   hoe.style.borderBottom = "2px solid var(--font-color)";
@@ -50,7 +50,7 @@ let homegen = () => {
     <div class="content">
         <div class="text">
             <div class="slogan">
-                BY<br>SNUITES<br>FOR<br>SNUITES
+                BY SNUITES <br> FOR SNUITES
             </div>
             <div class="slogan-para">
                 Welcome to SnuAcademia, the ultimate student designed website that helps in simplifying study life
