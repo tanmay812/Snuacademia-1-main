@@ -75,6 +75,7 @@ let homegen = () => {
 //default is Home
 homegen();
 document.getElementById("home").addEventListener("click", homegen);
+document.getElementById("homef").addEventListener("click", homegen);
 
 //generate Study Material Tab
 let studyGen = () => {
@@ -147,6 +148,7 @@ let studyGen = () => {
   generateCourses(courseArr, linkArr);
 };
 document.getElementById("study").addEventListener("click", studyGen);
+document.getElementById("studyf").addEventListener("click", studyGen);
 
 //Generate Roadmap
 const roadGen = () => {
@@ -213,6 +215,7 @@ const generateRoad = (array) => {
 };
 
 document.getElementById("road").addEventListener("click", roadGen);
+document.getElementById("roadf").addEventListener("click", roadGen);
 
 //Generate Erp Management Tab
 const erpGen = () => {
@@ -397,3 +400,4 @@ const erpGen = () => {
 };
 
 document.getElementById("erp").addEventListener("click", erpGen);
+document.getElementById("erpf").addEventListener("click", erpGen);
