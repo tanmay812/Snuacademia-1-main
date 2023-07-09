@@ -2,11 +2,13 @@
 :root {
   --bg-color: white;
   --font-color: black;
+  --secondary: #00b0ff;
 }
 
 .dark {
   --bg-color: black;
   --font-color: white;
+  --secondary: #536dfe;
 }
 
 body {
@@ -38,14 +40,17 @@ body {
 
 .options {
   display: flex;
-  width: 500px;
-  justify-content: space-between;
+  width: max(500px, 50%);
+  justify-content: space-around;
   height: 25px;
+  font-size: max(15px, 1vw);
+
+  color: var(--font-color);
 }
 
 .options > div:hover {
-  border-bottom: 2px solid var(--font-color);
-  border-radius: 2px;
+  cursor: pointer;
+  color: var(--secondary);
 }
 
 .home {
@@ -268,7 +273,7 @@ a:active {
   flex-wrap: wrap;
 }
 .reasources > div:hover {
-  color: aqua;
+  color: var(--secondary);
   cursor: pointer;
 }
 .contact > a {
@@ -276,7 +281,7 @@ a:active {
   margin: 10px;
 }
 .contact > a:hover {
-  color: aqua;
+  color: var(--secondary);
 }
 
 .foot-logo {
@@ -288,7 +293,7 @@ a:active {
   gap: 8px;
 }
 .foot-logo:hover {
-  color: aqua;
+  color: var(--secondary);
 }
 .generate {
   flex-grow: 1;
