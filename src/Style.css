@@ -271,11 +271,11 @@ a:active {
   color: aqua;
   cursor: pointer;
 }
-.contact > i {
+.contact > a {
   color: white;
   margin: 10px;
 }
-.contact > i:hover {
+.contact > a:hover {
   color: aqua;
 }
 
