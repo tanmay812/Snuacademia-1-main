@@ -1,7 +1,8 @@
 import "./Style.css";
 import logo1 from "../src/reasources/10.png";
 import logo2 from "../src/reasources/9.png";
-
+import dpic from "../src/reasources/darkmode.svg";
+import lpic from "../src/reasources/lightmode.svg";
 //Intial logo generation
 document.getElementById("lg").src = logo1;
 
@@ -15,7 +16,7 @@ const options = document.getElementById("options");
 toggle.addEventListener("click", function () {
   this.classList.toggle("bi-moon");
   document.body.classList.toggle("dark");
-  const logo = document.getElementById("logo");
+  const logo = document.getElementById("lg");
   const img = document.getElementById("image");
 
   //see which mode it is
@@ -24,12 +25,12 @@ toggle.addEventListener("click", function () {
   if (isDarkMode) {
     logo.src = logo2;
     if (img) {
-      img.src = "../src/reasources/dark.jpg";
+      img.src = dpic;
     }
   } else {
     logo.src = logo1;
     if (img) {
-      img.src = "../src/reasources/light-bat.jpg";
+      img.src = lpic;
     }
   }
 });
@@ -57,16 +58,16 @@ let homegen = () => {
             </div>
         </div>
     </div>
-    <img id="image" src="../src/reasources/light-bat.jpg" style="width:50%;margin-right: 10%;">
+    <img id="image" src='${lpic}' style="width:50%;margin-right: 10%;">
 </div>`;
   const img = document.getElementById("image");
   if (isDarkMode) {
     if (img) {
-      img.src = "../src/reasources/dark.jpg";
+      img.src = dpic;
     }
   } else {
     if (img) {
-      img.src = "../src/reasources/light-bat.jpg";
+      img.src = lpic;
     }
   }
 };
