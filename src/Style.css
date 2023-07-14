@@ -268,7 +268,7 @@ a.ar {
   justify-content: center;
   color: white;
   gap: 10px;
-  width: 300px;
+  width: 50%;
   flex-wrap: wrap;
 }
 .reasources > div:hover {
