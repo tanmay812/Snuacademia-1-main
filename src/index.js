@@ -252,7 +252,6 @@ const erpGen = () => {
   function faqFill(array) {
     faqs.innerHTML = "";
     for (let i = 0; i < array.length; i++) {
-      console.log("hello");
       let element = array[i];
       let faqDiv = document.createElement("div");
       faqDiv.innerHTML = `<div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
@@ -261,7 +260,7 @@ const erpGen = () => {
       </div>
       <div class="sol" id='sol-${i}'>${element.answer}</div>`;
       faqs.appendChild(faqDiv);
-      document.getElementById(`drop-${i}`).addEventListener("click", () => {
+      faqDiv.addEventListener("click", () => {
         const sol = document.getElementById(`sol-${i}`);
         const arrow = document.getElementById(`drop-${i}`);
         if (sol.style.display == "flex") {
