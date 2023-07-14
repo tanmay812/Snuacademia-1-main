@@ -3,10 +3,10 @@ import logo1 from "../src/reasources/10.png";
 import logo2 from "../src/reasources/9.png";
 import dpic from "../src/reasources/darkmode.svg";
 import lpic from "../src/reasources/lightmode.svg";
-import minlogo from "../src/reasources/logol.png";
+
 //Intial logo generation
 document.getElementById("lg").src = logo1;
-document.getElementById("ft-logo").src = minlogo;
+document.getElementById("ft-logo").src = logo2;
 //DarkMode LightMode Toggle
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
