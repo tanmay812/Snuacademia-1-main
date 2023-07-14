@@ -105,7 +105,7 @@ i {
   align-items: center;
   flex-direction: row;
   border: 2px solid var(--font-color);
-  width: 40vw;
+  width: max(40vw, 300px);
   padding: 8px;
   padding-left: 15px;
   gap: 10px;
@@ -207,6 +207,8 @@ a:active {
   font-size: 0.5em;
   font-weight: 200;
   margin-top: 2vh;
+  display: flex;
+  text-align: center;
 }
 .faqs {
   display: flex;

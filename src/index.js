@@ -161,7 +161,7 @@ const roadGen = () => {
   <div class="tagline">
       <span>Choose</span>
       <span>Your Academic Trail</span>
-      <span style="font-size: max(20px,1.5vw); font-weight: 200; margin-top: 2vh;">Chart Your Academic Journey: Explore Major and Minor Paths</span>
+      <span class="sub-tag">Chart Your Academic Journey: Explore Major and Minor Paths</span>
   </div>
   <div class="search-bar">
       <span><i class="bi bi-search" style="font-size: max(20px,1.5vw);" ></i></span>
