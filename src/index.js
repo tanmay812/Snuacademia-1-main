@@ -228,7 +228,7 @@ const erpGen = () => {
   <div class="tagline">
       <span>Simplify</span>
       <span>Your Erp Experience</span>
-      <span style="font-size: max(20px,1.5vw); font-weight: 200; margin-top: 2vh;">Commonly asked FAQs </span>
+      <span class="sub-tag" >Commonly asked FAQs </span>
   </div>
   <div class="linkSection">
       <div id="erpLink">Erp</div>
