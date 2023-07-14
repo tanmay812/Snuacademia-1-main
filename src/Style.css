@@ -170,13 +170,14 @@ a:active {
 .generate {
   padding-bottom: 20px;
 }
-
+/*erp management*/
 .linkSection {
   margin-top: 5vh;
   display: flex;
   width: 80%;
   justify-content: space-around;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .erpManagement {
   display: flex;
@@ -185,7 +186,6 @@ a:active {
 }
 .linkSection > div {
   display: flex;
-
   justify-content: center;
   align-items: center;
   border: 1px solid var(--font-color);
@@ -203,6 +203,7 @@ a:active {
   background-color: var(--font-color);
   transition: 100ms;
 }
+
 .faqs {
   display: flex;
   flex-direction: column;
@@ -211,7 +212,6 @@ a:active {
   gap: 20px;
 }
 .faqs > div {
-  width: 100%;
   border: 1px solid var(--font-color);
   display: flex;
   align-items: flex-start;
