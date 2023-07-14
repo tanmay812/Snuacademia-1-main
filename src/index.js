@@ -170,7 +170,7 @@ const roadGen = () => {
   <div class="roads">
       
   </div>`;
-  let roadArr = ["CSC", "ECE", "EEE", "MECH", "BMS", "ECO"];
+  let roadArr = ["CSE", "ECE", "EEE", "MECH", "BMS", "ECO"];
   generateRoad(roadArr);
 };
 
