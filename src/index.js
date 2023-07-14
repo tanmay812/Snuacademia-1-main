@@ -88,7 +88,7 @@ let studyGen = () => {
     <div class="tagline">
         <span>Where Textbooks</span>
         <span>And Dreams Collide</span>
-        <span style="font-size: max(20px,1.5vw); font-weight: 200; margin-top: 2vh;">Explore, Discover, and Shape Your Academic Journey with Limitless Possibilities</span>
+        <span class="sub-tag">Explore, Discover, and Shape Your Academic Journey with Limitless Possibilities</span>
     </div>
     <div class="search-bar">
         <span><i class="bi bi-search" style="font-size: max(20px,1.5vw);" ></i></span>
