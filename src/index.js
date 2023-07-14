@@ -76,7 +76,7 @@ let homegen = () => {
 homegen();
 document.getElementById("home").addEventListener("click", homegen);
 document.getElementById("homef").addEventListener("click", homegen);
-
+document.querySelector(".foot-logo").addEventListener("click", homegen);
 //generate Study Material Tab
 let studyGen = () => {
   hoe.style.borderBottom = "none";
