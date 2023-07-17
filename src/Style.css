@@ -42,7 +42,6 @@ body {
   justify-content: space-around;
   height: 25px;
   font-size: max(15px, 1vw);
-
   color: var(--font-color);
 }
 

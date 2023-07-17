@@ -227,7 +227,7 @@ const erpGen = () => {
   generate.innerHTML = `<div class="erpManagement">
   <div class="tagline">
       <span>Simplify</span>
-      <span>Your Erp Experience</span>
+      <span> Your Snu Experience</span>
       <span class="sub-tag" >Commonly asked FAQs </span>
   </div>
   <div class="linkSection">
