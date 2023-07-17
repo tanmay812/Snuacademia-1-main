@@ -7,6 +7,9 @@ import lpic from "../src/reasources/lightmode.svg";
 //Intial logo generation
 document.getElementById("lg").src = logo1;
 document.getElementById("ft-logo").src = logo2;
+//intial homepage pic generation
+const img = document.getElementById("image");
+img.src = lpic;
 //DarkMode LightMode Toggle
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
@@ -73,8 +76,6 @@ let homegen = () => {
   }
 };
 
-//default is Home
-homegen();
 document.getElementById("home").addEventListener("click", homegen);
 document.getElementById("homef").addEventListener("click", homegen);
 document.querySelector(".foot-logo").addEventListener("click", homegen);
