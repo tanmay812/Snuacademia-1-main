@@ -4,7 +4,6 @@ import logo2 from "../src/reasources/9.png";
 import dpic from "../src/reasources/darkmode.svg";
 import lpic from "../src/reasources/lightmode.svg";
 
-
 //Intial logo generation
 document.getElementById("lg").src = logo1;
 document.getElementById("ft-logo").src = logo2;
@@ -38,7 +37,6 @@ toggle.addEventListener("click", function () {
   }
 });
 
-
 let generate = document.querySelector(".generate");
 const hoe = document.getElementById("home");
 const stud = document.getElementById("study");
@@ -66,23 +64,8 @@ let homegen = () => {
     </div>
     <img id="image" src='${lpic}' style="width:50%;margin-right: 10%;">
 </div>
-<section id="slider">
-<input type="radio" name="slider" id="s1" checked>
-<input type="radio" name="slider" id="s2">
-<input type="radio" name="slider" id="s3">
+`;
 
-
-<label for="s1" id="slide1"><h2>Our Goal</h2>
-<p>Welcome to Snu Academia, your ultimate companion on the academic journey! We strive to ease your life by providing an extensive range of study materials—notes, PYQs, and assignments. Our expertly designed roadmaps recommend Core courses, UWE's, and CCC's, ensuring a clear direction for your future studies without worrying about credits. Additionally, you can count on us for guidance on ERP, Blackboard, and general freshers' queries. Your success in academic pursuits is our top priority!</p>
-</label>
-<label for="s2" id="slide2"><h2>Our Journey</h2>
-<p>Our journey is a long one originating from our hostel room on a random afternoon. During the summer vacations, we sought the support of our peers and together, we started working on this project. Throughout this journey, we gained valuable knowledge in website designing, content creation and management. Despite facing various challenges while developing this website, we persevered and now, we are thrilled to be here and are ready to assist you in your academic journey!</p>
-</label>
-<label for="s3" id="slide3"><h2>Open Source Contribution</h2>
-<p>Our website is an open-source platform, which means that its source code is freely available for students interested in web development and contributing to our project. If you wish to make any contributions, you can access the source code through a link provided on our website. This link will redirect you to our GitHub page, where you can find the source code and submit your changes for approval. We welcome your participation and look forward to collaborating with you!</p></label>
-
-</section>`;
-    
   const img = document.getElementById("image");
   if (isDarkMode) {
     if (img) {
@@ -98,7 +81,7 @@ let homegen = () => {
 document.getElementById("home").addEventListener("click", homegen);
 document.getElementById("homef").addEventListener("click", homegen);
 document.querySelector(".foot-logo").addEventListener("click", homegen);
-document.querySelector(".logo").addEventListener("click",homegen);
+document.querySelector(".logo").addEventListener("click", homegen);
 //generate Study Material Tab
 let studyGen = () => {
   hoe.style.borderBottom = "none";
@@ -398,19 +381,9 @@ const erpGen = () => {
     faqFill(blackboardFaqs);
   });
 };
-
-const radioButtons = document.querySelectorAll('input[type=radio]');
-
-
-const slideShow = () => {
- for(let i =0; i<radioButtons.length; i++){
-   setInterval(() => {
-     console.log(i)
-   }, 3000)
- }
-}
-
-
-slideShow();
-
-
+document.getElementById("erp").addEventListener("click", () => {
+  erpGen();
+});
+document.getElementById("erpf").addEventListener("click", () => {
+  erpGen();
+});
