@@ -4,6 +4,7 @@ import logo2 from "../src/reasources/9.png";
 import dpic from "../src/reasources/darkmode.svg";
 import lpic from "../src/reasources/lightmode.svg";
 
+
 //Intial logo generation
 document.getElementById("lg").src = logo1;
 document.getElementById("ft-logo").src = logo2;
@@ -37,6 +38,7 @@ toggle.addEventListener("click", function () {
   }
 });
 
+
 let generate = document.querySelector(".generate");
 const hoe = document.getElementById("home");
 const stud = document.getElementById("study");
@@ -64,8 +66,23 @@ let homegen = () => {
     </div>
     <img id="image" src='${lpic}' style="width:50%;margin-right: 10%;">
 </div>
-`;
+<section id="slider">
+<input type="radio" name="slider" id="s1" checked>
+<input type="radio" name="slider" id="s2">
+<input type="radio" name="slider" id="s3">
 
+
+<label for="s1" id="slide1"><h2>Our Goal</h2>
+<p>SnuAcademia aims to assist students throughout their academic journey with study materials, notes, PYQs, and assignments. We offer roadmaps for recommended courses and guidance for future studies, ensuring clarity in academic pursuits. Our website addresses common questions about ERP, Blackboard, and other general queries for freshers.</p>
+</label>
+<label for="s2" id="slide2"><h2>Our Journey</h2>
+<p>Our journey began on a random afternoon in our hostel room, where we started working on this project with the support of our peers. We gained valuable knowledge in website designing, content creation, and management, overcoming challenges to be here and support students in their academic journey.</p>
+</label>
+<label for="s3" id="slide3"><h2>Open Source Contribution</h2>
+<p>Our website is open-source, allowing students interested in web development to access and contribute to the source code through our GitHub page. We welcome your participation and collaboration in making our platform even better.</p></label>
+
+</section>`;
+    
   const img = document.getElementById("image");
   if (isDarkMode) {
     if (img) {
@@ -81,7 +98,7 @@ let homegen = () => {
 document.getElementById("home").addEventListener("click", homegen);
 document.getElementById("homef").addEventListener("click", homegen);
 document.querySelector(".foot-logo").addEventListener("click", homegen);
-document.querySelector(".logo").addEventListener("click", homegen);
+document.querySelector(".logo").addEventListener("click",homegen);
 //generate Study Material Tab
 let studyGen = () => {
   hoe.style.borderBottom = "none";
@@ -381,9 +398,27 @@ const erpGen = () => {
     faqFill(blackboardFaqs);
   });
 };
+
 document.getElementById("erp").addEventListener("click", () => {
   erpGen();
 });
 document.getElementById("erpf").addEventListener("click", () => {
   erpGen();
 });
+
+
+const radioButtons = document.querySelectorAll('input[type=radio]');
+
+
+const slideShow = () => {
+ for(let i =0; i<radioButtons.length; i++){
+   setInterval(() => {
+     console.log(i)
+   }, 3000)
+ }
+}
+
+
+slideShow();
+
+
