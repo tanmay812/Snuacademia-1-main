@@ -4,7 +4,6 @@ import logo2 from "../src/reasources/9.png";
 import dpic from "../src/reasources/darkmode.svg";
 import lpic from "../src/reasources/lightmode.svg";
 
-
 //Intial logo generation
 document.getElementById("lg").src = logo1;
 document.getElementById("ft-logo").src = logo2;
@@ -37,7 +36,6 @@ toggle.addEventListener("click", function () {
     }
   }
 });
-
 
 let generate = document.querySelector(".generate");
 const hoe = document.getElementById("home");
@@ -82,7 +80,7 @@ let homegen = () => {
 <p>Our website is open-source, allowing students interested in web development to access and contribute to the source code through our GitHub page. We welcome your participation and collaboration in making our platform even better.</p></label>
 
 </section>`;
-    
+
   const img = document.getElementById("image");
   if (isDarkMode) {
     if (img) {
@@ -98,7 +96,7 @@ let homegen = () => {
 document.getElementById("home").addEventListener("click", homegen);
 document.getElementById("homef").addEventListener("click", homegen);
 document.querySelector(".foot-logo").addEventListener("click", homegen);
-document.querySelector(".logo").addEventListener("click",homegen);
+document.querySelector(".logo").addEventListener("click", homegen);
 //generate Study Material Tab
 let studyGen = () => {
   hoe.style.borderBottom = "none";
@@ -406,19 +404,13 @@ document.getElementById("erpf").addEventListener("click", () => {
   erpGen();
 });
 
-
-const radioButtons = document.querySelectorAll('input[type=radio]');
-
+const radioButtons = document.querySelectorAll("input[type=radio]");
 
 const slideShow = () => {
- for(let i =0; i<radioButtons.length; i++){
-   setInterval(() => {
-     console.log(i)
-   }, 3000)
- }
-}
-
-
+  for (let i = 0; i < radioButtons.length; i++) {
+    setInterval(() => {
+      console.log(i);
+    }, 3000);
+  }
+};
 slideShow();
-
-
