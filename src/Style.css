@@ -457,6 +457,7 @@ p {
 
 /*Responsive*/
 @media screen and (max-width: 800px) {
+  /*homepage taglines*/
   body {
     align-items: center;
   }
@@ -476,5 +477,36 @@ p {
   }
   .slogan-para {
     text-align: center;
+  }
+  /*slider*/
+  #slider {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    min-height: 50vh;
+    width: 70%;
+  }
+  #slider label {
+    height: 100%;
+  }
+  .sliderContent {
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    align-items: center;
+  }
+  h2 {
+    font-size: max(2.6vw, 14px);
+  }
+  p {
+    width: 80%;
+    font-size: max(2.5vw, 11px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  input[type="radio"] {
+    position: relative;
+    top: 104%;
   }
 }
