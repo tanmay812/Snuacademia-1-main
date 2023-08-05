@@ -60,9 +60,10 @@ body {
 }
 
 .slogan {
-  font-size: max(5vw, 50px);
+  font-size: max(3.5vw, 40px);
   display: flex;
   margin-bottom: 20px;
+  font-weight: 900;
 }
 
 .slogan-para {
@@ -312,19 +313,19 @@ h1 {
   top: 20%;
   transform: translateX(-50%);
   white-space: nowrap;
-  }
- 
+}
+
 #slider {
   position: relative;
   width: 50%;
   height: 30vw;
   margin: 80px auto;
-  font-family: 'DM sans', sans-serif;
+  font-family: "DM sans", sans-serif;
   perspective: 1400px;
   transform-style: preserve-3d;
 }
 
-input[type=radio] {
+input[type="radio"] {
   position: relative;
   top: 108%;
   left: 50%;
@@ -336,7 +337,6 @@ input[type=radio] {
   cursor: pointer;
 }
 
-
 /*input[type=radio]:nth-child(5) {
   margin-right: 0px;
 }
@@ -345,16 +345,14 @@ input[type=radio]:checked {
   opacity: 1;
 }*/
 
-
-h2{
+h2 {
   font-size: 2.5vw;
   margin: 2vw;
   color: white;
   position: relative;
- 
 }
 
-p{
+p {
   position: relative;
   margin: 8vw;
   font-size: 1.5vw;
@@ -369,7 +367,7 @@ p{
   left: 0;
   top: 0;
   color: white;
- 
+
   font-weight: normal;
   border-radius: 5px;
   cursor: pointer;
@@ -382,22 +380,22 @@ p{
 #slide1 {
   background: #066892;
 }
-.dark  #slide1 {
-  background:  #232E6F  ;
+.dark #slide1 {
+  background: #232e6f;
 }
 
 #slide2 {
-  background: #0D97D2;
+  background: #0d97d2;
 }
 .dark #slide2 {
-  background: #384AB2  ;
+  background: #384ab2;
 }
 
 #slide3 {
-  background: #00B0FF;
+  background: #00b0ff;
 }
 .dark #slide3 {
-  background: #536DFE;
+  background: #536dfe;
 }
 /*
 #slide4 {
@@ -408,37 +406,77 @@ p{
   background: violet;
 }*/
 
-
 /* Slider Functionality */
 
 /* Active Slide */
-#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
-  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
   transform: translate3d(0%, 0, 0px);
 }
 
 /* Next Slide */
-#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
   transform: translate3d(15%, 0, -100px);
 }
 
-
 /* Next to Next Slide */
-#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
-  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   transform: translate3d(30%, 0, -250px);
 }
 
 /* Previous to Previous Slide */
-#s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
-  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   transform: translate3d(-30%, 0, -250px);
 }
 
 /* Previous Slide */
-#s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
   transform: translate3d(-15%, 0, -100px);
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    align-items: center;
+  }
+  #image {
+    display: none;
+  }
+  .home {
+    padding-left: 0;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slogan {
+    text-align: center;
+  }
+  .slogan-para {
+    text-align: center;
+  }
+}
