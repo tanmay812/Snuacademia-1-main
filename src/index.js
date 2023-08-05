@@ -3,6 +3,9 @@ import logo1 from "../src/reasources/10.png";
 import logo2 from "../src/reasources/9.png";
 import dpic from "../src/reasources/darkmode.svg";
 import lpic from "../src/reasources/lightmode.svg";
+import spic1 from "../src/reasources/goal.svg";
+import spic2 from "../src/reasources/journey.svg";
+import spic3 from "../src/reasources/opensource.svg";
 
 //Intial logo generation
 document.getElementById("lg").src = logo1;
@@ -10,6 +13,9 @@ document.getElementById("ft-logo").src = logo2;
 //intial homepage pic generation
 const img = document.getElementById("image");
 img.src = lpic;
+document.getElementById("goal").src = spic1;
+document.getElementById("journey").src = spic2;
+document.getElementById("os").src = spic3;
 //DarkMode LightMode Toggle
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
@@ -71,7 +77,7 @@ let homegen = () => {
         <label for="s1" id="slide1"
           ><h2>Our Goal</h2>
           <div class="sliderContent">
-            <img src="../src/reasources/goal.svg" width="50%" />
+            <img src="${spic1}" width="50%" />
             <p>
               SnuAcademia aims to assist students throughout their academic
               journey with study materials, notes, PYQs, and assignments. Our
@@ -83,7 +89,7 @@ let homegen = () => {
         <label for="s2" id="slide2"
           ><h2>Our Journey</h2>
           <div class="sliderContent">
-            <img src="../src/reasources/journey.svg" width="50%" />
+            <img src="${spic2}" width="50%" />
             <p>
               Our journey began on a random afternoon in our hostel room, where
               we started working on this project with the support of our peers.
@@ -93,7 +99,7 @@ let homegen = () => {
         <label for="s3" id="slide3"
           ><h2>Open Source Contribution</h2>
           <div class="sliderContent">
-            <img src="../src/reasources/opensource.svg" width="40%" />
+            <img src="${spic3}" width="40%" />
             <p>
               Our website is open-source, allowing students to access and
               contribute to the source code through our GitHub repository. We
@@ -431,9 +437,7 @@ const radioButtons = document.querySelectorAll("input[type=radio]");
 
 const slideShow = () => {
   for (let i = 0; i < radioButtons.length; i++) {
-    setInterval(() => {
-      console.log(i);
-    }, 3000);
+    setInterval(() => {}, 3000);
   }
 };
 slideShow();
