@@ -54,7 +54,7 @@ let homegen = () => {
     <div class="content">
         <div class="text">
             <div class="slogan">
-            Simplify academics with us
+              Simplify academics with us
             </div>
             <div class="slogan-para">
                 Welcome to SnuAcademia, the ultimate student designed website that helps in simplifying study life
@@ -65,21 +65,44 @@ let homegen = () => {
     <img id="image" src='${lpic}' style="width:50%;margin-right: 10%;">
 </div>
 <section id="slider">
-<input type="radio" name="slider" id="s1" checked>
-<input type="radio" name="slider" id="s2">
-<input type="radio" name="slider" id="s3">
-
-
-<label for="s1" id="slide1"><h2>Our Goal</h2>
-<p>SnuAcademia aims to assist students throughout their academic journey with study materials, notes, PYQs, and assignments. We offer roadmaps for recommended courses and guidance for future studies, ensuring clarity in academic pursuits. Our website addresses common questions about ERP, Blackboard, and other general queries for freshers.</p>
-</label>
-<label for="s2" id="slide2"><h2>Our Journey</h2>
-<p>Our journey began on a random afternoon in our hostel room, where we started working on this project with the support of our peers. We gained valuable knowledge in website designing, content creation, and management, overcoming challenges to be here and support students in their academic journey.</p>
-</label>
-<label for="s3" id="slide3"><h2>Open Source Contribution</h2>
-<p>Our website is open-source, allowing students interested in web development to access and contribute to the source code through our GitHub page. We welcome your participation and collaboration in making our platform even better.</p></label>
-
-</section>`;
+        <input type="radio" name="slider" id="s1" checked />
+        <input type="radio" name="slider" id="s2" />
+        <input type="radio" name="slider" id="s3" />
+        <label for="s1" id="slide1"
+          ><h2>Our Goal</h2>
+          <div class="sliderContent">
+            <img src="../src/reasources/goal.svg" width="50%" />
+            <p>
+              SnuAcademia aims to assist students throughout their academic
+              journey with study materials, notes, PYQs, and assignments. Our
+              website also addresses common questions about ERP, Blackboard, and
+              other general queries for freshers.
+            </p>
+          </div>
+        </label>
+        <label for="s2" id="slide2"
+          ><h2>Our Journey</h2>
+          <div class="sliderContent">
+            <img src="../src/reasources/journey.svg" width="50%" />
+            <p>
+              Our journey began on a random afternoon in our hostel room, where
+              we started working on this project with the support of our peers.
+            </p>
+          </div>
+        </label>
+        <label for="s3" id="slide3"
+          ><h2>Open Source Contribution</h2>
+          <div class="sliderContent">
+            <img src="../src/reasources/opensource.svg" width="40%" />
+            <p>
+              Our website is open-source, allowing students to access and
+              contribute to the source code through our GitHub repository. We
+              welcome your participation and collaboration in making our
+              platform even better.
+            </p>
+          </div>
+        </label>
+      </section>`;
 
   const img = document.getElementById("image");
   if (isDarkMode) {
