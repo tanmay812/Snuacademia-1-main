@@ -305,15 +305,8 @@ a.ar {
   align-items: center;
   justify-content: center;
 }
-h1 {
-  font-size: 3rem;
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
+
+/*slider*/
 
 #slider {
   position: relative;
@@ -323,17 +316,18 @@ h1 {
   font-family: "DM sans", sans-serif;
   perspective: 1400px;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
 }
 
 input[type="radio"] {
   position: relative;
   top: 108%;
-  left: 50%;
+
   width: 4vw;
   height: 18px;
   margin: 0 15px 0 0;
   opacity: 0.6;
-  transform: translateX(-83px);
   cursor: pointer;
 }
 
@@ -458,6 +452,7 @@ p {
   transform: translate3d(-15%, 0, -100px);
 }
 
+/*Responsive*/
 @media screen and (max-width: 800px) {
   body {
     align-items: center;

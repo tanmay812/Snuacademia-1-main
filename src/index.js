@@ -54,7 +54,7 @@ let homegen = () => {
     <div class="content">
         <div class="text">
             <div class="slogan">
-                BY SNUITES <br> FOR SNUITES
+            Simplify academics with us
             </div>
             <div class="slogan-para">
                 Welcome to SnuAcademia, the ultimate student designed website that helps in simplifying study life
