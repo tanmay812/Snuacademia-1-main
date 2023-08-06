@@ -11,11 +11,11 @@ import spic3 from "../src/reasources/opensource.svg";
 document.getElementById("lg").src = logo1;
 document.getElementById("ft-logo").src = logo2;
 //intial homepage pic generation
-const img = document.getElementById("image");
-img.src = lpic;
-document.getElementById("goal").src = spic1;
-document.getElementById("journey").src = spic2;
-document.getElementById("os").src = spic3;
+// const img = document.getElementById("image");
+// img.src = lpic;
+// document.getElementById("goal").src = spic1;
+// document.getElementById("journey").src = spic2;
+// document.getElementById("os").src = spic3;
 //DarkMode LightMode Toggle
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
@@ -437,7 +437,9 @@ const radioButtons = document.querySelectorAll("input[type=radio]");
 
 const slideShow = () => {
   for (let i = 0; i < radioButtons.length; i++) {
-    setInterval(() => {}, 3000);
+    setInterval(() => {
+      console.log(i);
+    }, 3000);
   }
 };
 slideShow();
