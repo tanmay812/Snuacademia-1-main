@@ -6,6 +6,8 @@ import lpic from "../src/reasources/lightmode.svg";
 import spic1 from "../src/reasources/goal.svg";
 import spic2 from "../src/reasources/journey.svg";
 import spic3 from "../src/reasources/opensource.svg";
+import computer from "../src/reasources/computer.svg";
+import helpPic from "../src/reasources/helpLight.svg";
 
 //Intial logo generation
 document.getElementById("lg").src = logo1;
@@ -447,7 +449,7 @@ const aboutGen = () => {
           dedicated student, or a lifelong enthusiast.
         </div>
       </div>
-      <img src="../src/reasources/computer.svg" alt="" width="25%" />
+      <img src="${computer}" alt="" width="25%" />
     </div>
     <div class="secondContent">
       <div class="textContent">
@@ -462,7 +464,7 @@ const aboutGen = () => {
           expert instructors.
         </div>
       </div>
-      <img src="../src/reasources/helpLight.svg" alt="" width="25%" />
+      <img src=${helpPic} alt="" width="25%" />
     </div>
   </div>
   <div class="team">
@@ -542,7 +544,18 @@ const aboutGen = () => {
     </div>
   </div>
 </div>`;
+  let teamBay = document.querySelector(".teamBay");
 };
+
+// let team = {
+//   [{
+//     firstName:"Vamsi", lastName:"Kaparthi", designation: "Cofounder", insta: "https://www.instagram.com/__vamsi__17/", linkedin: "https://www.linkedin.com/in/vamsi-kaparthi-371730222", git:"https://github.com/VamsiKaparthi", img:
+//   },
+//   {
+
+//   }
+// ]
+// }
 
 document.addEventListener("click", function (event) {
   const aboutButton = event.target.closest(".sloganButton");
@@ -554,9 +567,7 @@ const radioButtons = document.querySelectorAll("input[type=radio]");
 
 const slideShow = () => {
   for (let i = 0; i < radioButtons.length; i++) {
-    setInterval(() => {
-      console.log(i);
-    }, 3000);
+    setInterval(() => {}, 3000);
   }
 };
 slideShow();
