@@ -68,7 +68,7 @@ body {
 
 .slogan-para {
   font-size: max(1vw, 20px);
-  width: max(80%, 300px);
+  width: max(80%, 280px);
 }
 
 i {
@@ -305,6 +305,21 @@ a.ar {
   align-items: center;
 }
 /*About us*/
+.sloganButton {
+  margin-top: 4vw;
+  width: max(200px, 20vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  font-size: max(1.2vw, 20px);
+}
+.sloganButton:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
 .about {
   margin-top: 1vh;
   padding: 5vw;
