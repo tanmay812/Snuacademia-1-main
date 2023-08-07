@@ -6,6 +6,8 @@ import lpic from "../src/reasources/lightmode.svg";
 import spic1 from "../src/reasources/goal.svg";
 import spic2 from "../src/reasources/journey.svg";
 import spic3 from "../src/reasources/opensource.svg";
+import computer from "../src/reasources/computer.svg";
+import helpPic from "../src/reasources/helpLight.svg";
 
 //Intial logo generation
 document.getElementById("lg").src = logo1;
@@ -66,6 +68,7 @@ let homegen = () => {
                 Welcome to SnuAcademia, the ultimate student designed website that helps in simplifying study life
                 at SNU
             </div>
+            <div class="sloganButton">About us</div>
         </div>
     </div>
     <img id="image" src='${lpic}' style="width:50%;margin-right: 10%;">
@@ -433,6 +436,133 @@ document.getElementById("erpf").addEventListener("click", () => {
   erpGen();
 });
 
+const aboutGen = () => {
+  generate.innerHTML = `<div class="about">
+  <div class="aboutContent">
+    <div class="firstContent">
+      <div class="textContent">
+        <div class="question">What is <span>SnuAcademia</span>?</div>
+        <div class="answer">
+          Unlock the doors to knowledge and embark on a journey of
+          intellectual growth with SnuAcademia, your premier online
+          education platform. Whether you're a curious learner, a
+          dedicated student, or a lifelong enthusiast.
+        </div>
+      </div>
+      <img src="${computer}" alt="" width="25%" />
+    </div>
+    <div class="secondContent">
+      <div class="textContent">
+        <div class="question">
+          How<span> SnuAcademia </span>can help you?
+        </div>
+        <div class="answer">
+          An education website can significantly enhance your learning
+          journey by providing a diverse range of resources tailored to
+          various subjects and learning styles, offering flexible
+          scheduling and self-paced progress tracking, connecting you with
+          expert instructors.
+        </div>
+      </div>
+      <img src=${helpPic} alt="" width="25%" />
+    </div>
+  </div>
+  <div class="team">
+    <div class="meetTeam">MEET THE TEAM</div>
+    <div class="teamBay">
+      <div>Core</div>
+      <div>Dev Team</div>
+      <div>Content Team</div>
+    </div>
+    <div class="teamPeople">
+      <div data-active="active">
+        <div class="person">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="../src/reasources/vamsi.jpg"
+                  alt="Avatar"
+                  height="100%"
+                />
+              </div>
+              <div class="flip-card-back">
+                <span>"It is what it is"</span>
+                <div class="socials">
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a href="https://in.linkedin.com/" target="_blank"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://github.com/VamsiKaparthi/Snuacademia/tree/main"
+                    target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span>Vamsi Kaparthi</span>
+          <span>Cofounder</span>
+        </div>
+        <div class="person">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="../src/reasources/vamsi.jpg"
+                  alt="Avatar"
+                  height="100%"
+                />
+              </div>
+              <div class="flip-card-back">
+                <span>"It is what it is"</span>
+                <div class="socials">
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a href="https://in.linkedin.com/" target="_blank"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://github.com/VamsiKaparthi/Snuacademia/tree/main"
+                    target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span>Vamsi Kaparthi</span>
+          <span>Cofounder</span>
+        </div>
+      </div>
+      <div data-active="inactive"></div>
+      <div data-active="inactive"></div>
+    </div>
+  </div>
+</div>`;
+  let teamBay = document.querySelector(".teamBay");
+};
+
+// let team = {
+//   [{
+//     firstName:"Vamsi", lastName:"Kaparthi", designation: "Cofounder", insta: "https://www.instagram.com/__vamsi__17/", linkedin: "https://www.linkedin.com/in/vamsi-kaparthi-371730222", git:"https://github.com/VamsiKaparthi", img:
+//   },
+//   {
+
+//   }
+// ]
+// }
+
+document.addEventListener("click", function (event) {
+  const aboutButton = event.target.closest(".sloganButton");
+  if (aboutButton) {
+    aboutGen(); // Generate "About Us" content
+  }
+});
 const radioButtons = document.querySelectorAll("input[type=radio]");
 
 const slideShow = () => {

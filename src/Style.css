@@ -75,7 +75,7 @@ body {
 
 .slogan-para {
   font-size: max(1vw, 20px);
-  width: max(80%, 300px);
+  width: max(80%, 280px);
 }
 
 i {
@@ -310,15 +310,176 @@ a.ar {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+/*About us*/
+.sloganButton {
+  margin-top: 4vw;
+  width: max(200px, 20vw);
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  font-size: max(1.2vw, 20px);
+}
+.sloganButton:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+.about {
+  margin-top: 1vh;
+  padding: 5vw;
+}
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vw;
+}
+.firstContent,
+.secondContent {
+  display: flex;
+  gap: 15vw;
+  padding-bottom: 8vw;
+  border-bottom: 1px solid var(--font-color);
+}
+.secondContent {
+  flex-direction: row-reverse;
+  border-bottom: none;
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+.question {
+  font-size: 3vw;
+  margin-bottom: 20px;
+}
+.question > span {
+  color: var(--secondary);
+}
+.answer {
+  font-size: min(2vw, 30px);
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(6vw, 80px);
+}
+.meetTeam {
+  width: fit-content;
+  font-size: 5.5vw;
+  font-weight: 600;
+  border-bottom: 2px solid var(--secondary);
+}
+.teamBay {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.teamBay > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: max(1.2vw, 13px);
+  width: 25vw;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid var(--font-color);
+  border-radius: 10px;
+}
+.teamBay > div:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+.teamPeople {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+}
+.teamPeople > div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+/*flipcard*/
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flip-card {
+  background-color: transparent;
+  width: min(25vw, 300px);
+  height: min(25vw, 300px);
+  perspective: 1000px;
+  margin-bottom: 0.8vw;
 }
 
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: var(--font-color);
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: var(--secondary);
+  color: var(--font-color);
+  font-size: max(1.2vw, 13px);
+  transform: rotateY(180deg);
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: max(5px, 10%);
+  width: 70%;
+}
+.socials > a > i {
+  font-size: max(2vw, 15px);
+}
+.person > span {
+  font-size: max(1.3vw, 13px);
+}
 /*slider*/
 
 #slider {
   position: relative;
   width: 60%;
-  height: 30vw;
+  min-height: 30vw;
   margin: 80px auto;
   font-family: "DM sans", sans-serif;
   perspective: 1400px;
