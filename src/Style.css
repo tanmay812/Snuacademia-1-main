@@ -9,6 +9,9 @@
   --bg-color: black;
   --font-color: white;
   --secondary: #536dfe;
+  --color1: rgb(240, 240, 240);
+  --color3: rgb(23, 23, 24) ;
+  --color2: rgb(23, 23, 24) ;
 }
 
 body {
@@ -20,15 +23,24 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
+  --color1: black ;
+  --color2: rgb(23, 23, 24) ;
+  --color3: rgb(240, 240, 240);
 }
 
 .header {
+  width: 100%;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   height: 50px;
   align-items: center;
   margin-right: 2%;
+
+  list-style: none;
+  position: relative;
+ /* padding: 12px 20px;*/
 }
 
 .logo {
@@ -432,6 +444,7 @@ a.ar {
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
+  border-radius: 10px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -441,6 +454,9 @@ a.ar {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+}
+.flip-card-front > img{
+  border-radius: 10px;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -455,10 +471,13 @@ a.ar {
   font-size: max(1.2vw, 13px);
   transform: rotateY(180deg);
 }
+.flip-card-back > span{
+  margin-bottom: 2.5vw;
+}
 .socials {
   display: flex;
   justify-content: center;
-  gap: max(5px, 10%);
+  gap: max(1vw, 10%);
   width: 70%;
 }
 .socials > a > i {
@@ -482,7 +501,8 @@ a.ar {
 }
 
 input[type="radio"] {
-  position: relative;
+  display: none;
+  position: absolute;
   top: 108%;
   width: 4vw;
   height: 18px;
@@ -667,7 +687,72 @@ p {
     text-align: center;
   }
   input[type="radio"] {
-    position: relative;
+    position: absolute;
     top: 104%;
   }
+}
+
+/*hamburger menu*/
+.options  {display: flex;}
+/* .options div {padding-left: 30px;}
+/*.options div #home #erp #road #study {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: left;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.options div #home 
+ #erp #road #study::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.options div #home #erp #road  #study:hover:after {width: 100%;}*/
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+  position: absolute;
+    top: 76%;
+    left: 52%;
+    transform: translateY(-50%);
+}
+.close-menu {
+  color: var(--color1);
+    top: 40px;
+    right: 35px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+  .options {
+    font-weight: bold;
+    font-size: larger;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--color3);
+      transition: all 0.2s ease-in-out;
+  }
+  .options div {margin-top: 40px;}
+   /* .options div #home #erp #road  #study {padding: 10px;}*/
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .options {right: 0;}
 }
