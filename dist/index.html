@@ -35,16 +35,20 @@
 
   <body>
     <div class="header">
+      <input type='checkbox' id='check' />
       <div class="logo">
         <img alt="hi" id="lg" style="height: min(50px, 10vw)" />
         <!-- SNUacademia -->
       </div>
+      
       <div class="options" id="options">
         <div id="home">Home</div>
         <div id="study">Study-Material</div>
         <div id="road">Road-Maps</div>
         <div id="erp">FAQ</div>
+        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
       </div>
+      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
       <label>
         <i class="bi bi-brightness-high" id="toggleDark"></i>
         <span class="ball"></span>

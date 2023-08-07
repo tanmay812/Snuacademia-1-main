@@ -20,6 +20,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
+  --color1: black ;
+  --color2: rgb(23, 23, 24) ;
 }
 
 .header {
@@ -29,6 +32,10 @@ body {
   height: 50px;
   align-items: center;
   margin-right: 2%;
+
+  list-style: none;
+  position: relative;
+ /* padding: 12px 20px;*/
 }
 
 .logo {
@@ -509,4 +516,69 @@ p {
     position: relative;
     top: 104%;
   }
+}
+
+/*hamburger menu*/
+.options  {display: flex;}
+.options div {padding-left: 30px;}
+/*.options div #home #erp #road #study {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: left;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.options div #home 
+ #erp #road #study::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.options div #home #erp #road  #study:hover:after {width: 100%;}*/
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+  position: relative;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+}
+.close-menu {
+  color: var(--color1);
+    top: 40px;
+    right: 35px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+  .options {
+    font-weight: bold;
+    font-size: larger;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 70vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: rgb(240, 240, 240);
+      transition: all 0.2s ease-in-out;
+  }
+  .options div {margin-top: 40px;}
+   /* .options div #home #erp #road  #study {padding: 10px;}*/
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .options {right: 0;}
 }
