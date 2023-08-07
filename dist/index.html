@@ -1,140 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SNUacademia</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Dosis:300,400,700"
-      rel="stylesheet"
-    />
 
-    <script
-      src="https://kit.fontawesome.com/fdb68a30cf.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnuAcademia</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+  <script src="https://kit.fontawesome.com/fdb68a30cf.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-    <script src="main.js" defer></script>
-  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
-  <body>
-    <div class="header">
-      <input type='checkbox' id='check' />
-      <div class="logo">
-        <img alt="hi" id="lg" style="height: min(50px, 10vw)" />
-        <!-- SNUacademia -->
-      </div>
-      
-      <div class="options" id="options">
-        <div id="home">Home</div>
-        <div id="study">Study-Material</div>
-        <div id="road">Road-Maps</div>
-        <div id="erp">FAQ </div>
-        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-      </div>
-      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-      <label>
-        <i class="bi bi-brightness-high" id="toggleDark" style="margin-right: 20px;"></i>
-        <span class="ball"></span>
-      </label>
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="header">
+    <input type='checkbox' id='check' />
+    <div class="logo">
+      <img alt="hi" id="lg" style="height: min(50px, 10vw)" />
+      <!-- SNUacademia -->
     </div>
-    <div class="generate">
-      <div class="home">
-        <div class="content">
-          <div class="text">
-            <div class="slogan">Simplify academics with us</div>
-            <div class="slogan-para">
-              Welcome to SnuAcademia, the ultimate student designed website that
-              helps in simplifying study life at SNU
-            </div>
-            <div class="sloganButton">About us</div>
+
+    <div class="options" id="options">
+      <div id="home">Home</div>
+      <div id="study">Study-Material</div>
+      <div id="road">Road-Maps</div>
+      <div id="erp">FAQ </div>
+      <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+    </div>
+    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    <label>
+      <i class="bi bi-brightness-high" id="toggleDark" style="margin-right: 20px;"></i>
+      <span class="ball"></span>
+    </label>
+  </div>
+  <div class="generate">
+    <div class="home">
+      <div class="content">
+        <div class="text">
+          <div class="slogan">Simplify academics with us</div>
+          <div class="slogan-para">
+            Welcome to SnuAcademia, the ultimate student designed website that
+            helps in simplifying study life at SNU
           </div>
+          <div class="sloganButton">About us</div>
         </div>
-        <img id="image" style="width: 50%; margin-right: 10%" />
       </div>
-      <section id="slider"> 
-        <input type="radio" name="slider" id="s1" checked />
-        <input type="radio" name="slider" id="s2" />
-        <input type="radio" name="slider" id="s3" />
-        <label for="s1" id="slide1"
-          ><h2>Our Goal</h2>
-          <div class="sliderContent">
-            <img width="50%" id="goal" />
-            <p>
-              SnuAcademia aims to assist students throughout their academic
-              journey with study materials, notes, PYQs, and assignments. Our
-              website also addresses common questions about ERP, Blackboard, and
-              other general queries for freshers.
-            </p>
-          </div>
-        </label>
-        <label for="s2" id="slide2"
-          ><h2>Our Journey</h2>
-          <div class="sliderContent">
-            <img width="50%" id="journey" />
-            <p>
-              Our journey began on a random afternoon in our hostel room, where
-              we started working on this project with the support of our peers.
-            </p>
-          </div>
-        </label>
-        <label for="s3" id="slide3"
-          ><h2>Open Source Contribution</h2>
-          <div class="sliderContent">
-            <img width="40%" id="os" />
-            <p>
-              Our website is open-source, allowing students to access and
-              contribute to the source code through our GitHub repository. We
-              welcome your participation and collaboration in making our
-              platform even better.
-            </p>
-          </div>
-        </label>
-      </section>
+      <img id="image" style="width: 50%; margin-right: 10%" />
     </div>
-    <div class="footer">
-      <div class="contact">
-        <a href="https://www.instagram.com/" target="_blank"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a href="mailto:snuacademia@gmail.com" target="_blank"
-          ><i class="bi bi-envelope"></i
-        ></a>
-        <a href="https://in.linkedin.com/" target="_blank"
-          ><i class="bi bi-linkedin"></i
-        ></a>
-        <a
-          href="https://github.com/VamsiKaparthi/Snuacademia/tree/main"
-          target="_blank"
-          ><i class="bi bi-github"></i
-        ></a>
+    <section id="slider">
+      <input type="radio" name="slider" id="s1" checked />
+      <input type="radio" name="slider" id="s2" />
+      <input type="radio" name="slider" id="s3" />
+      <label for="s1" id="slide1">
+        <h2>Our Goal</h2>
+        <div class="sliderContent">
+          <img width="50%" id="goal" />
+          <p>
+            SnuAcademia aims to assist students throughout their academic
+            journey with study materials, notes, PYQs, and assignments. Our
+            website also addresses common questions about ERP, Blackboard, and
+            other general queries for freshers.
+          </p>
+        </div>
+      </label>
+      <label for="s2" id="slide2">
+        <h2>Our Journey</h2>
+        <div class="sliderContent">
+          <img width="50%" id="journey" />
+          <p>
+            Our journey began on a random afternoon in our hostel room, where
+            we started working on this project with the support of our peers.
+          </p>
+        </div>
+      </label>
+      <label for="s3" id="slide3">
+        <h2>Open Source Contribution</h2>
+        <div class="sliderContent">
+          <img width="40%" id="os" />
+          <p>
+            Our website is open-source, allowing students to access and
+            contribute to the source code through our GitHub repository. We
+            welcome your participation and collaboration in making our
+            platform even better.
+          </p>
+        </div>
+      </label>
+    </section>
+  </div>
+  <div class="footer">
+    <div class="leftside">
+      <div class="foot-logo">
+        <img src id="ft-logo" style="height: 38px" alt="" />
+        <div>SnuAcademia</div>
       </div>
-      <div class="reasources">
+      <div class="contact">
+        <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:snuacademia@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+        <a href="https://in.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/VamsiKaparthi/Snuacademia/tree/main" target="_blank"><i
+            class="bi bi-github"></i></a>
+      </div>
+    </div>
+    <div class="reasources">
+      <div class="primaryres">
         <div id="homef">Home</div>
         <div id="studyf">Study-Material</div>
         <div id="roadf">Road-Map</div>
+      </div>
+      <div class="secondaryres">
         <div id="erpf">FAQ</div>
+        <div class="aboutf">About us</div>
+
       </div>
-      <div class="foot-logo">
-        <img src id="ft-logo" style="height: 45px" alt="" />
-        <div>SnuAcademia</div>
-      </div>
+      <div class="contactusmail">Contact us : <a href="mailto:Academiasnu@gmail.com"
+          target="_blank">academiasnu@gmail.com</a> </div>
     </div>
-  </body>
+
+
+  </div>
+</body>
+
 </html>
